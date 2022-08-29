@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */; };
 		C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */; };
-		C0F956FE28BCB14A009AD4D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956FD28BCB14A009AD4D7 /* ViewController.swift */; };
+		C0F956FE28BCB14A009AD4D7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */; };
 		C0F9570328BCB14C009AD4D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F9570228BCB14C009AD4D7 /* Assets.xcassets */; };
 		C0F9570628BCB14C009AD4D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F9570428BCB14C009AD4D7 /* LaunchScreen.storyboard */; };
+		C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */; };
+		C0F9571228BCBC25009AD4D7 /* FindCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C0F956F628BCB14A009AD4D7 /* MovieApp_CodeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp_CodeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C0F956FD28BCB14A009AD4D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C0F9570228BCB14C009AD4D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F9570528BCB14C009AD4D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F9570728BCB14C009AD4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankViewController.swift; sourceTree = "<group>"; };
+		C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCinemaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */,
 				C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */,
-				C0F956FD28BCB14A009AD4D7 /* ViewController.swift */,
+				C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */,
+				C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */,
+				C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */,
 				C0F9570228BCB14C009AD4D7 /* Assets.xcassets */,
 				C0F9570428BCB14C009AD4D7 /* LaunchScreen.storyboard */,
 				C0F9570728BCB14C009AD4D7 /* Info.plist */,
@@ -134,9 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F956FE28BCB14A009AD4D7 /* ViewController.swift in Sources */,
+				C0F956FE28BCB14A009AD4D7 /* TabBarController.swift in Sources */,
 				C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */,
 				C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */,
+				C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */,
+				C0F9571228BCBC25009AD4D7 /* FindCinemaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
