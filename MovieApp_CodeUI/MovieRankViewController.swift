@@ -9,9 +9,22 @@ import UIKit
 
 final class MovieRankViewController: UIViewController {
     
+    let searchController = UISearchController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .green
+        setupNavigationBar()
+        setupSearchBar()
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "박스오피스 순위"
+        
+    }
+    
+    func setupSearchBar() {
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
     }
 }
