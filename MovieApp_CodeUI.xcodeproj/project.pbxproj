@@ -14,6 +14,8 @@
 		C0F9570628BCB14C009AD4D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F9570428BCB14C009AD4D7 /* LaunchScreen.storyboard */; };
 		C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */; };
 		C0F9571228BCBC25009AD4D7 /* FindCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */; };
+		C0F9571528BCD92C009AD4D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0F9571428BCD92C009AD4D7 /* SnapKit */; };
+		C0F9571728BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		C0F9570728BCB14C009AD4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankViewController.swift; sourceTree = "<group>"; };
 		C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCinemaViewController.swift; sourceTree = "<group>"; };
+		C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F9571528BCD92C009AD4D7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */,
 				C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */,
 				C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */,
+				C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */,
 				C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */,
 				C0F9570228BCB14C009AD4D7 /* Assets.xcassets */,
 				C0F9570428BCB14C009AD4D7 /* LaunchScreen.storyboard */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = MovieApp_CodeUI;
+			packageProductDependencies = (
+				C0F9571428BCD92C009AD4D7 /* SnapKit */,
+			);
 			productName = MovieApp_CodeUI;
 			productReference = C0F956F628BCB14A009AD4D7 /* MovieApp_CodeUI.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = C0F956ED28BCB14A009AD4D7;
+			packageReferences = (
+				C0F9571328BCD92C009AD4D7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C0F956F728BCB14A009AD4D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,6 +156,7 @@
 				C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */,
 				C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */,
 				C0F9571228BCBC25009AD4D7 /* FindCinemaViewController.swift in Sources */,
+				C0F9571728BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0F9571328BCD92C009AD4D7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0F9571428BCD92C009AD4D7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F9571328BCD92C009AD4D7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F956EE28BCB14A009AD4D7 /* Project object */;
 }
