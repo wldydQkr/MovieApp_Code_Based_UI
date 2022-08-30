@@ -10,9 +10,11 @@ import SnapKit
 
 final class MovieRankCollectionViewCell: UICollectionViewCell {
     
+    var movieData: MovieData?
+    
     static let identifier = "MovieRankCollectionViewCell"
     
-    private lazy var imageView: UIImageView = {
+    var imageView: UIImageView = {
         let imageView = UIImageView()
         
         imageView.clipsToBounds = true
@@ -23,14 +25,14 @@ final class MovieRankCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14.0, weight: .semibold)
         
         return label
     }()
     
-    private lazy var userRatingLabel: UILabel = {
+    var userRatingLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14.0, weight: .semibold)
         
@@ -41,9 +43,9 @@ final class MovieRankCollectionViewCell: UICollectionViewCell {
         setupViews()
         setupLayout()
         
-        imageView.image = UIImage(systemName: "film")
-        titleLabel.text = "1. 미니언즈"
-        userRatingLabel.text = "평점 : 10.0"
+        //        imageView.image = UIImage(systemName: "film")
+        //        titleLabel.text = "1. 미니언즈"
+        //        userRatingLabel.text = "평점 : 10.0"
     }
     
 }

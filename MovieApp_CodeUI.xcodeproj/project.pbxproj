@@ -18,6 +18,7 @@
 		C0F9571728BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */; };
 		C0F9571928BD1E37009AD4D7 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */; };
 		C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */; };
+		C0F9572128BE0D9A009AD4D7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9572028BE0D9A009AD4D7 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentStackView.swift; sourceTree = "<group>"; };
+		C0F9572028BE0D9A009AD4D7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */,
 				C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */,
+				C0F9572028BE0D9A009AD4D7 /* Movie.swift */,
 				C0F9571A28BDED05009AD4D7 /* Scenes */,
 				C0F9570228BCB14C009AD4D7 /* Assets.xcassets */,
 				C0F9570428BCB14C009AD4D7 /* LaunchScreen.storyboard */,
@@ -183,6 +186,7 @@
 			files = (
 				C0F956FE28BCB14A009AD4D7 /* TabBarController.swift in Sources */,
 				C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */,
+				C0F9572128BE0D9A009AD4D7 /* Movie.swift in Sources */,
 				C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */,
 				C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */,
 				C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */,
