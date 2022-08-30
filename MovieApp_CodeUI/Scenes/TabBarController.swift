@@ -19,13 +19,20 @@ final class TabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "film.fill")
         )
         
-        let findCinemaViewController = UINavigationController(rootViewController: FindCinemaViewController())
-        findCinemaViewController.tabBarItem = UITabBarItem(
-            title: "영화관 찾기",
+        let findMovieViewController = UINavigationController(rootViewController: FindMovieViewController())
+        findMovieViewController.tabBarItem = UITabBarItem(
+            title: "영화 찾기",
             image: UIImage(systemName: "magnifyingglass.circle"),
             selectedImage: UIImage(systemName: "magnifyingglass.circle.fill")
         )
         
-        viewControllers = [movieRankViewController, findCinemaViewController]
+        let findCinemaViewController = UINavigationController(rootViewController: FindCinemaViewController())
+        findCinemaViewController.tabBarItem = UITabBarItem(
+            title: "영화관 찾기",
+            image: UIImage(systemName: "location"),
+            selectedImage: UIImage(systemName: "location.fill")
+        )
+        
+        viewControllers = [movieRankViewController, findMovieViewController, findCinemaViewController]
     }
 }

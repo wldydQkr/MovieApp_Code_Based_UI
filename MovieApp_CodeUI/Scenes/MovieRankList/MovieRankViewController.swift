@@ -14,8 +14,6 @@ final class MovieRankViewController: UIViewController {
     
     var movieData: MovieData?
     
-    let searchController = UISearchController()
-    
     private lazy var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
@@ -36,7 +34,6 @@ final class MovieRankViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
-        setupSearchBar()
         setupViews()
         
         movieURL += makeYesterdayString()
@@ -96,11 +93,6 @@ extension MovieRankViewController {
         navigationItem.title = "일별 박스오피스 😎"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-    }
-    
-    func setupSearchBar() {
-        searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
     }
     
     func setupViews() {
