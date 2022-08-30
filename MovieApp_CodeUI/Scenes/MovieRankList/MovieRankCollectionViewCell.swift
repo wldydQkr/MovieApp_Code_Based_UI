@@ -18,6 +18,7 @@ final class MovieRankCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .secondarySystemBackground
+        imageView.layer.cornerRadius = 12.0
         
         return imageView
     }()
@@ -42,7 +43,7 @@ final class MovieRankCollectionViewCell: UICollectionViewCell {
         
         imageView.image = UIImage(systemName: "film")
         titleLabel.text = "1. 미니언즈"
-        userRatingLabel.text = "⭐️ 10.0"
+        userRatingLabel.text = "평점 : 10.0"
     }
     
 }

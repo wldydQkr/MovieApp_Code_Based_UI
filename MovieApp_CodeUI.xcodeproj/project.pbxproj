@@ -17,6 +17,7 @@
 		C0F9571528BCD92C009AD4D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0F9571428BCD92C009AD4D7 /* SnapKit */; };
 		C0F9571728BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */; };
 		C0F9571928BD1E37009AD4D7 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */; };
+		C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCinemaViewController.swift; sourceTree = "<group>"; };
 		C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRankCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +68,41 @@
 			children = (
 				C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */,
 				C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */,
-				C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */,
-				C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */,
-				C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */,
-				C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */,
-				C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */,
+				C0F9571A28BDED05009AD4D7 /* Scenes */,
 				C0F9570228BCB14C009AD4D7 /* Assets.xcassets */,
 				C0F9570428BCB14C009AD4D7 /* LaunchScreen.storyboard */,
 				C0F9570728BCB14C009AD4D7 /* Info.plist */,
 			);
 			path = MovieApp_CodeUI;
+			sourceTree = "<group>";
+		};
+		C0F9571A28BDED05009AD4D7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */,
+				C0F9571B28BDED24009AD4D7 /* MovieRankList */,
+				C0F9571C28BDED34009AD4D7 /* MovieRankDetail */,
+				C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C0F9571B28BDED24009AD4D7 /* MovieRankList */ = {
+			isa = PBXGroup;
+			children = (
+				C0F9570F28BCBB24009AD4D7 /* MovieRankViewController.swift */,
+				C0F9571628BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift */,
+			);
+			path = MovieRankList;
+			sourceTree = "<group>";
+		};
+		C0F9571C28BDED34009AD4D7 /* MovieRankDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */,
+				C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */,
+			);
+			path = MovieRankDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +183,7 @@
 			files = (
 				C0F956FE28BCB14A009AD4D7 /* TabBarController.swift in Sources */,
 				C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */,
+				C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */,
 				C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */,
 				C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */,
 				C0F9571928BD1E37009AD4D7 /* MovieDetailViewController.swift in Sources */,
