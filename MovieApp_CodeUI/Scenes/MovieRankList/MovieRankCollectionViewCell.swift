@@ -10,7 +10,7 @@ import SnapKit
 
 final class MovieRankCollectionViewCell: UICollectionViewCell {
     
-    var movieData: MovieData?
+    var movieData: Movie?
     
     static let identifier = "MovieRankCollectionViewCell"
     

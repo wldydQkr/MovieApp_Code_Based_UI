@@ -12,7 +12,7 @@ final class MovieRankViewController: UIViewController {
     
     var movieURL = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=ff9c16a03f346ef0d94dad367d05269c&targetDt="
     
-    var movieData: MovieData?
+    var movie: Movie?
     
     private lazy var collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
@@ -33,6 +33,7 @@ final class MovieRankViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TODO: refresh 추가하기 
         setupNavigationBar()
         setupViews()
         
@@ -70,10 +71,10 @@ final class MovieRankViewController: UIViewController {
             let decoder = JSONDecoder()
             
             do {
-                let decodeData = try decoder.decode(MovieData.self, from: JSONData)
+                let decodeData = try decoder.decode(Movie.self, from: JSONData)
 //                print(decodeData.movieData?.boxOfficeResult.dailyBoxOfficeList[0].movieNm)
 //                print(decodeData.movieData?.boxOfficeResult.dailyBoxOfficeList[0].audiCnt)
-                self.movieData = decodeData
+                self.movie = decodeData
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -86,7 +87,7 @@ final class MovieRankViewController: UIViewController {
 
 }
 
-//MARK: setup() 메서드
+//MARK: setup 메서드
 extension MovieRankViewController {
     
     func setupNavigationBar() {
@@ -132,8 +133,8 @@ extension MovieRankViewController: UICollectionViewDataSource {
             withReuseIdentifier: MovieRankCollectionViewCell.identifier,
             for: indexPath) as? MovieRankCollectionViewCell
         
-        cell?.titleLabel.text = movieData?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].movieNm
-        cell?.userRatingLabel.text = "순위: \(movieData?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].rnum ?? "0")"
+        cell?.titleLabel.text = movie?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].movieNm
+        cell?.userRatingLabel.text = "\(movie?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].rnum ?? "")위"
         
         cell?.update()
         
@@ -141,7 +142,7 @@ extension MovieRankViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = MovieDetailViewController()
+        let vc = MovieDetailViewController(movie: movie!)
         present(vc, animated: true)
     }
     

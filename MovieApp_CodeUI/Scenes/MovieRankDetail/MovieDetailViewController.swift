@@ -21,17 +21,30 @@ final class MovieDetailViewController: UIViewController {
         return imageView
     }()
     
+    private var movie: Movie
+    
+    init(movie: Movie) {
+        self.movie = movie
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
+    
         //TODO: 예매하기 버튼 구현하기
     }
     
     func setupViews() {
         view.backgroundColor = .systemBackground
         
-        let titleLabelContentsStackViwe = MovieContentStackView(title: "제목", contents: "미니언즈")
+        let titleLabelContentsStackViwe = MovieContentStackView(title: "제목", contents: "시발")
         let userRatingContentsStackView = MovieContentStackView(title: "평점", contents: "10.0")
         let actorContentsStackView = MovieContentStackView(title: "배우", contents: "박지용")
         let directorContentsStackView = MovieContentStackView(title: "감독", contents: "제임스 박")
@@ -71,5 +84,9 @@ final class MovieDetailViewController: UIViewController {
             $0.top.equalTo(imageView.snp.bottom).offset(inset)
         }
     }
+    
+}
+
+protocol MovieDetailProtocol: AnyObject {
     
 }

@@ -18,10 +18,17 @@ final class FindMovieViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         setupSearchBar()
+        setupNavigationBar()
     }
     
     func setupSearchBar() {
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "영화 찾기 🔎"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
 }
