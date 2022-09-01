@@ -134,7 +134,7 @@ extension MovieRankViewController: UICollectionViewDataSource {
             for: indexPath) as? MovieRankCollectionViewCell
         
         cell?.titleLabel.text = movie?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].movieNm
-        cell?.userRatingLabel.text = "\(movie?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].rnum ?? "")위"
+        cell?.userRatingLabel.text = "\(movie?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].rank ?? "")위"
         
         cell?.update()
         
@@ -142,7 +142,7 @@ extension MovieRankViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = MovieDetailViewController(movie: movie!)
+        let vc = MovieDetailViewController(movie: movie!, indexPath: indexPath.row)
         present(vc, animated: true)
     }
     

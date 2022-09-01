@@ -16,15 +16,18 @@ final class MovieDetailViewController: UIViewController {
         imageView.backgroundColor = .secondarySystemBackground
         imageView.layer.cornerRadius = 12.0
         
-        imageView.image = UIImage(systemName: "film")
+        imageView.image = UIImage(named: "minions")
         
         return imageView
     }()
     
     private var movie: Movie
     
-    init(movie: Movie) {
+    private var indexPath: Int
+    
+    init(movie: Movie, indexPath: Int) {
         self.movie = movie
+        self.indexPath = indexPath
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -39,18 +42,19 @@ final class MovieDetailViewController: UIViewController {
         setupViews()
     
         //TODO: 예매하기 버튼 구현하기
+        //TODO: Naver 영화 api로 바꾸기
     }
     
     func setupViews() {
         view.backgroundColor = .systemBackground
         
-        let titleLabelContentsStackViwe = MovieContentStackView(title: "제목", contents: "시발")
+        let titleLabelContentsStackViwe = MovieContentStackView(title: "제목", contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].movieNm)
         let userRatingContentsStackView = MovieContentStackView(title: "평점", contents: "10.0")
         let actorContentsStackView = MovieContentStackView(title: "배우", contents: "박지용")
         let directorContentsStackView = MovieContentStackView(title: "감독", contents: "제임스 박")
-        let pubDateContentsStackView = MovieContentStackView(title: "개봉일", contents: "2022년 8월 30일")
-        let audiAccumulateContentsStackView = MovieContentStackView(title: "누적", contents: "100,000,000명")
-        let audiCountContentsStackView = MovieContentStackView(title: "어제", contents: "100,000명")
+        let pubDateContentsStackView = MovieContentStackView(title: "개봉일", contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].openDt)
+        let audiAccumulateContentsStackView = MovieContentStackView(title: "누적", contents: "\(movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiAcc)명")
+        let audiCountContentsStackView = MovieContentStackView(title: "어제", contents: "\(movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiCnt)명")
         
         let contentsStackView = UIStackView()
         contentsStackView.axis = .vertical
