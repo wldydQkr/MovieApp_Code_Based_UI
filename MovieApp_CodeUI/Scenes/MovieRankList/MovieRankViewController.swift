@@ -10,6 +10,8 @@ import SnapKit
 
 final class MovieRankViewController: UIViewController {
     
+    let refreshControl = UIRefreshControl()
+    
     var movieURL = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=ff9c16a03f346ef0d94dad367d05269c&targetDt="
     
     var movie: Movie?
@@ -36,6 +38,7 @@ final class MovieRankViewController: UIViewController {
         //TODO: refresh 추가하기 
         setupNavigationBar()
         setupViews()
+        initRefresh()
         
         movieURL += makeYesterdayString()
         
@@ -72,8 +75,6 @@ final class MovieRankViewController: UIViewController {
             
             do {
                 let decodeData = try decoder.decode(Movie.self, from: JSONData)
-//                print(decodeData.movieData?.boxOfficeResult.dailyBoxOfficeList[0].movieNm)
-//                print(decodeData.movieData?.boxOfficeResult.dailyBoxOfficeList[0].audiCnt)
                 self.movie = decodeData
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
@@ -85,6 +86,24 @@ final class MovieRankViewController: UIViewController {
         task.resume()
     }
 
+}
+
+//MARK: refresh 메서드
+private extension MovieRankViewController {
+    @objc func didCalledRefresh(refresh: UIRefreshControl) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.collectionView.reloadData()
+            refresh.endRefreshing()
+        }
+    }
+    
+    func initRefresh() {
+        refreshControl.addTarget(self, action: #selector(didCalledRefresh(refresh:)), for: .valueChanged)
+        
+        refreshControl.tintColor = .systemIndigo
+        
+        collectionView.refreshControl = refreshControl
+    }
 }
 
 //MARK: setup 메서드

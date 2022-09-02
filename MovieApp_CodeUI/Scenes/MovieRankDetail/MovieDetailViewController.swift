@@ -48,13 +48,46 @@ final class MovieDetailViewController: UIViewController {
     func setupViews() {
         view.backgroundColor = .systemBackground
         
-        let titleLabelContentsStackViwe = MovieContentStackView(title: "제목", contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].movieNm)
-        let userRatingContentsStackView = MovieContentStackView(title: "평점", contents: "10.0")
-        let actorContentsStackView = MovieContentStackView(title: "배우", contents: "박지용")
-        let directorContentsStackView = MovieContentStackView(title: "감독", contents: "제임스 박")
-        let pubDateContentsStackView = MovieContentStackView(title: "개봉일", contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].openDt)
-        let audiAccumulateContentsStackView = MovieContentStackView(title: "누적", contents: "\(movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiAcc)명")
-        let audiCountContentsStackView = MovieContentStackView(title: "어제", contents: "\(movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiCnt)명")
+        let titleLabelContentsStackViwe = MovieContentStackView(
+            title: "제목",
+            contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].movieNm
+        )
+        let userRatingContentsStackView = MovieContentStackView(
+            title: "평점",
+            contents: "10.0"
+        )
+        let actorContentsStackView = MovieContentStackView(
+            title: "배우",
+            contents: "박지용"
+        )
+        let directorContentsStackView = MovieContentStackView(
+            title: "감독",
+            contents: "제임스 박"
+        )
+        let pubDateContentsStackView = MovieContentStackView(
+            title: "개봉일",
+            contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].openDt
+        )
+        let audiAccumulateContentsStackView = MovieContentStackView(
+            title: "누적",
+            contents: "\(movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiAcc)명"
+        )
+        let audiCountContentsStackView = MovieContentStackView(
+            title: "어제",
+            contents: "\(movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiCnt)명"
+        )
+        
+//        if let aCnt = movie.boxOfficeResult.dailyBoxOfficeList[indexPath].audiCnt {
+//
+//                 let numF = NumberFormatter()
+//
+//                 numF.numberStyle = .decimal
+//
+//                 let aCount = Int(aCnt)!
+//
+//                 let result = numF.string(for: aCount)!+"명"
+//
+//             }
         
         let contentsStackView = UIStackView()
         contentsStackView.axis = .vertical
