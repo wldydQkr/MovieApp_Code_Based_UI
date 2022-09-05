@@ -52,18 +52,18 @@ final class MovieDetailViewController: UIViewController {
             title: "제목",
             contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].movieNm
         )
-        let userRatingContentsStackView = MovieContentStackView(
-            title: "평점",
-            contents: "10.0"
-        )
-        let actorContentsStackView = MovieContentStackView(
-            title: "배우",
-            contents: "박지용"
-        )
-        let directorContentsStackView = MovieContentStackView(
-            title: "감독",
-            contents: "제임스 박"
-        )
+//        let userRatingContentsStackView = MovieContentStackView(
+//            title: "평점",
+//            contents: "10.0"
+//        )
+//        let actorContentsStackView = MovieContentStackView(
+//            title: "배우",
+//            contents: "박지용"
+//        )
+//        let directorContentsStackView = MovieContentStackView(
+//            title: "감독",
+//            contents: "제임스 박"
+//        )
         let pubDateContentsStackView = MovieContentStackView(
             title: "개봉일",
             contents: movie.boxOfficeResult.dailyBoxOfficeList[indexPath].openDt
@@ -95,9 +95,9 @@ final class MovieDetailViewController: UIViewController {
         
         [
             titleLabelContentsStackViwe,
-            userRatingContentsStackView,
-            actorContentsStackView,
-            directorContentsStackView,
+//            userRatingContentsStackView,
+//            actorContentsStackView,
+//            directorContentsStackView,
             pubDateContentsStackView,
             audiAccumulateContentsStackView,
             audiCountContentsStackView

@@ -21,7 +21,7 @@ final class MovieRankCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .secondarySystemBackground
         imageView.layer.cornerRadius = 12.0
-        imageView.image = UIImage(named: "minions.jpeg")
+        imageView.image = UIImage(systemName: "film")
         
         return imageView
     }()
