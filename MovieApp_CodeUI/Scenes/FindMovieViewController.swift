@@ -10,12 +10,17 @@ import SnapKit
 
 final class FindMovieViewController: UIViewController {
     
-    private let searchController = UISearchController()
+//    let userDefaultsManager: UserDefaultsManager
+    
+    private var likedMovie: [Movie] = []
+    
+    private var currentMovieSearchResult: [Movie] = []
     
     private lazy var searchResultTableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.isHidden = true
         
         return tableView
     }()
@@ -25,47 +30,48 @@ final class FindMovieViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-        setupSearchBar()
         setupNavigationBar()
-        setupViews()
-        updateSearchTableView(isHidden: true)
+//        setupViews()
     }
     
-    func setupSearchBar() {
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.delegate = self
-        navigationItem.searchController = searchController
-    }
-    
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationItem.title = "영화 찾기 🔎"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let searchController = UISearchController()
+        
+        searchController.searchBar.placeholder = "영화이름을 입력 해 주세요!"
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
+        
+        navigationItem.searchController = searchController
         
     }
     
     func setupViews() {
-        [searchResultTableView]
-            .forEach { view.addSubview($0) }
-        
+        view.addSubview(searchResultTableView)
+
         searchResultTableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-        
+    }
+}
+
+extension FindMovieViewController: UISearchBarDelegate {
+    // SearchBar가 활성화 될 떄
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchResultTableView.reloadData()
+        searchResultTableView.isHidden = false
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchResultTableView.isHidden = true
     }
     
-    func updateSearchTableView(isHidden: Bool) {
-        searchResultTableView.isHidden = isHidden
-        searchResultTableView.reloadData()
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchResultTableView.isHidden = true
     }
-}
-
-extension FindMovieViewController: UISearchControllerDelegate {
-    
-}
-
-extension FindMovieViewController: UITableViewDelegate {
-    
 }
 
 extension FindMovieViewController: UITableViewDataSource {
@@ -76,6 +82,8 @@ extension FindMovieViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
-    
-    
+}
+
+extension FindMovieViewController: UITableViewDelegate {
+
 }
