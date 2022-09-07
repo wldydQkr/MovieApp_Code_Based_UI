@@ -33,6 +33,6 @@ final class TabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "location.fill")
         )
         
-        viewControllers = [movieRankViewController, findMovieViewController]
+        viewControllers = [movieRankViewController, findCinemaViewController]
     }
 }

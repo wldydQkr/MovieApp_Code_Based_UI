@@ -21,7 +21,7 @@ final class MovieDetailViewController: UIViewController {
         return imageView
     }()
     
-    var cgvButton: UIButton = {
+    let cgvButton: UIButton = {
         let button = UIButton()
         button.setTitle(" CGV 예매 ", for: .normal)
         button.backgroundColor = .secondarySystemBackground
@@ -31,7 +31,7 @@ final class MovieDetailViewController: UIViewController {
         return button
     }()
     
-    var megaboxButton: UIButton = {
+    let megaboxButton: UIButton = {
         let button = UIButton()
         button.setTitle(" 메가박스 예매 ", for: .normal)
         button.backgroundColor = .secondarySystemBackground
@@ -41,7 +41,7 @@ final class MovieDetailViewController: UIViewController {
         return button
     }()
     
-    var lotteButton: UIButton = {
+    let lotteButton: UIButton = {
         let button = UIButton()
         button.setTitle(" 롯데시네마 예매 ", for: .normal)
         button.backgroundColor = .secondarySystemBackground
