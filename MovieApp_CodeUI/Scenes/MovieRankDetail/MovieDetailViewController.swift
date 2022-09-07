@@ -16,9 +16,39 @@ final class MovieDetailViewController: UIViewController {
         imageView.backgroundColor = .secondarySystemBackground
         imageView.layer.cornerRadius = 12.0
         
-        imageView.image = UIImage(named: "minions")
+        imageView.image = UIImage(named: "topgun")
         
         return imageView
+    }()
+    
+    var cgvButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(" CGV 예매 ", for: .normal)
+        button.backgroundColor = .secondarySystemBackground
+        button.setTitleColor(.systemIndigo, for: .normal)
+        button.layer.cornerRadius = 8.0
+        
+        return button
+    }()
+    
+    var megaboxButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(" 메가박스 예매 ", for: .normal)
+        button.backgroundColor = .secondarySystemBackground
+        button.setTitleColor(.systemIndigo, for: .normal)
+        button.layer.cornerRadius = 8.0
+        
+        return button
+    }()
+    
+    var lotteButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(" 롯데시네마 예매 ", for: .normal)
+        button.backgroundColor = .secondarySystemBackground
+        button.setTitleColor(.systemIndigo, for: .normal)
+        button.layer.cornerRadius = 8.0
+        
+        return button
     }()
     
     private var movie: Movie
@@ -93,6 +123,10 @@ final class MovieDetailViewController: UIViewController {
         contentsStackView.axis = .vertical
         contentsStackView.spacing = 8.0
         
+        let ticketingStackView = UIStackView()
+        ticketingStackView.axis = .horizontal
+        ticketingStackView.spacing = 10.0
+        
         [
             titleLabelContentsStackViwe,
 //            userRatingContentsStackView,
@@ -103,8 +137,14 @@ final class MovieDetailViewController: UIViewController {
             audiCountContentsStackView
         ].forEach { contentsStackView.addArrangedSubview($0) }
         
-        [imageView, contentsStackView]
+        [imageView, contentsStackView, ticketingStackView]
             .forEach { view.addSubview($0) }
+        
+        [
+            cgvButton,
+            megaboxButton,
+            lotteButton
+        ].forEach { ticketingStackView.addArrangedSubview($0) }
         
         let inset: CGFloat = 16.0
         
@@ -119,6 +159,12 @@ final class MovieDetailViewController: UIViewController {
             $0.leading.equalTo(imageView.snp.leading)
             $0.trailing.equalTo(imageView.snp.trailing)
             $0.top.equalTo(imageView.snp.bottom).offset(inset)
+        }
+        
+        ticketingStackView.snp.makeConstraints {
+            $0.leading.equalTo(imageView.snp.leading)
+            $0.trailing.equalTo(imageView.snp.trailing)
+            $0.top.equalTo(contentsStackView.snp.bottom).offset(10)
         }
     }
     

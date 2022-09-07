@@ -20,7 +20,6 @@
 		C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */; };
 		C0F9572128BE0D9A009AD4D7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9572028BE0D9A009AD4D7 /* Movie.swift */; };
 		C0F9572328BE1C20009AD4D7 /* FindMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9572228BE1C20009AD4D7 /* FindMovieViewController.swift */; };
-		C0F9572528BE46B0009AD4D7 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F9572428BE46B0009AD4D7 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentStackView.swift; sourceTree = "<group>"; };
 		C0F9572028BE0D9A009AD4D7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C0F9572228BE1C20009AD4D7 /* FindMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMovieViewController.swift; sourceTree = "<group>"; };
-		C0F9572428BE46B0009AD4D7 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 				C0F9571C28BDED34009AD4D7 /* MovieRankDetail */,
 				C0F9572228BE1C20009AD4D7 /* FindMovieViewController.swift */,
 				C0F9571128BCBC25009AD4D7 /* FindCinemaViewController.swift */,
-				C0F9572428BE46B0009AD4D7 /* UserDefaultsManager.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 				C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */,
 				C0F9572328BE1C20009AD4D7 /* FindMovieViewController.swift in Sources */,
 				C0F9572128BE0D9A009AD4D7 /* Movie.swift in Sources */,
-				C0F9572528BE46B0009AD4D7 /* UserDefaultsManager.swift in Sources */,
 				C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */,
 				C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */,
 				C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */,
