@@ -21,9 +21,10 @@ final class MovieDetailViewController: UIViewController {
         return imageView
     }()
     
-    let cgvButton: UIButton = {
+        let cgvButton: UIButton = {
         let button = UIButton()
         button.setTitle(" CGV 예매 ", for: .normal)
+        button.addTarget(self, action: #selector(presentToCgvViewController), for: .touchUpInside)
         button.backgroundColor = .secondarySystemBackground
         button.setTitleColor(.systemIndigo, for: .normal)
         button.layer.cornerRadius = 8.0
@@ -31,9 +32,10 @@ final class MovieDetailViewController: UIViewController {
         return button
     }()
     
-    let megaboxButton: UIButton = {
+    var megaboxButton: UIButton = {
         let button = UIButton()
         button.setTitle(" 메가박스 예매 ", for: .normal)
+        button.addTarget(self, action: #selector(presentToMegaboxViewController), for: .touchUpInside)
         button.backgroundColor = .secondarySystemBackground
         button.setTitleColor(.systemIndigo, for: .normal)
         button.layer.cornerRadius = 8.0
@@ -41,15 +43,34 @@ final class MovieDetailViewController: UIViewController {
         return button
     }()
     
-    let lotteButton: UIButton = {
+    var lotteButton: UIButton = {
         let button = UIButton()
         button.setTitle(" 롯데시네마 예매 ", for: .normal)
+        button.addTarget(self, action: #selector(presentToLottecinemaViewController), for: .touchUpInside)
         button.backgroundColor = .secondarySystemBackground
         button.setTitleColor(.systemIndigo, for: .normal)
         button.layer.cornerRadius = 8.0
         
         return button
     }()
+    
+    @objc func presentToCgvViewController() {
+        let cgvVC = UINavigationController(rootViewController: MoveToCgvViewController())
+        cgvVC.modalPresentationStyle = .automatic
+        present(cgvVC, animated: true)
+    }
+    
+    @objc func presentToMegaboxViewController() {
+        let cgvVC = UINavigationController(rootViewController: MoveToMegaboxViewController())
+        cgvVC.modalPresentationStyle = .automatic
+        present(cgvVC, animated: true)
+    }
+    
+    @objc func presentToLottecinemaViewController() {
+        let cgvVC = UINavigationController(rootViewController: MoveToLotteCinemaViewController())
+        cgvVC.modalPresentationStyle = .automatic
+        present(cgvVC, animated: true)
+    }
     
     private var movie: Movie
     
@@ -71,8 +92,7 @@ final class MovieDetailViewController: UIViewController {
         
         setupViews()
     
-        //TODO: 예매하기 버튼 구현하기
-        //TODO: Naver 영화 api로 바꾸기
+        //TODO: 예매하기 버튼 기능 구현
     }
     
     func setupViews() {
@@ -170,6 +190,6 @@ final class MovieDetailViewController: UIViewController {
     
 }
 
-protocol MovieDetailProtocol: AnyObject {
+protocol MovieDetailProtocol {
     
 }

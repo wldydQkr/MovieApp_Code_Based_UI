@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C075F0DB28CB67A400E383D3 /* MoveToCgvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075F0DA28CB67A400E383D3 /* MoveToCgvViewController.swift */; };
+		C075F0DD28CB77A400E383D3 /* MoveToMegaboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075F0DC28CB77A400E383D3 /* MoveToMegaboxViewController.swift */; };
+		C075F0DF28CB77C400E383D3 /* MoveToLottecinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C075F0DE28CB77C400E383D3 /* MoveToLottecinemaViewController.swift */; };
 		C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */; };
 		C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */; };
 		C0F956FE28BCB14A009AD4D7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F956FD28BCB14A009AD4D7 /* TabBarController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C075F0DA28CB67A400E383D3 /* MoveToCgvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToCgvViewController.swift; sourceTree = "<group>"; };
+		C075F0DC28CB77A400E383D3 /* MoveToMegaboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToMegaboxViewController.swift; sourceTree = "<group>"; };
+		C075F0DE28CB77C400E383D3 /* MoveToLottecinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToLottecinemaViewController.swift; sourceTree = "<group>"; };
 		C0F956F628BCB14A009AD4D7 /* MovieApp_CodeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp_CodeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F956F928BCB14A009AD4D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F956FB28BCB14A009AD4D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C075F0E028CB77C800E383D3 /* Ticketing */ = {
+			isa = PBXGroup;
+			children = (
+				C075F0DA28CB67A400E383D3 /* MoveToCgvViewController.swift */,
+				C075F0DC28CB77A400E383D3 /* MoveToMegaboxViewController.swift */,
+				C075F0DE28CB77C400E383D3 /* MoveToLottecinemaViewController.swift */,
+			);
+			path = Ticketing;
+			sourceTree = "<group>";
+		};
 		C0F956ED28BCB14A009AD4D7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +123,7 @@
 			children = (
 				C0F9571828BD1E37009AD4D7 /* MovieDetailViewController.swift */,
 				C0F9571D28BDED82009AD4D7 /* MovieContentStackView.swift */,
+				C075F0E028CB77C800E383D3 /* Ticketing */,
 			);
 			path = MovieRankDetail;
 			sourceTree = "<group>";
@@ -191,9 +208,12 @@
 				C0F956FA28BCB14A009AD4D7 /* AppDelegate.swift in Sources */,
 				C0F9572328BE1C20009AD4D7 /* FindMovieViewController.swift in Sources */,
 				C0F9572128BE0D9A009AD4D7 /* Movie.swift in Sources */,
+				C075F0DF28CB77C400E383D3 /* MoveToLottecinemaViewController.swift in Sources */,
+				C075F0DD28CB77A400E383D3 /* MoveToMegaboxViewController.swift in Sources */,
 				C0F9571E28BDED82009AD4D7 /* MovieContentStackView.swift in Sources */,
 				C0F956FC28BCB14A009AD4D7 /* SceneDelegate.swift in Sources */,
 				C0F9571028BCBB24009AD4D7 /* MovieRankViewController.swift in Sources */,
+				C075F0DB28CB67A400E383D3 /* MoveToCgvViewController.swift in Sources */,
 				C0F9571928BD1E37009AD4D7 /* MovieDetailViewController.swift in Sources */,
 				C0F9571228BCBC25009AD4D7 /* FindCinemaViewController.swift in Sources */,
 				C0F9571728BCD9FE009AD4D7 /* MovieRankCollectionViewCell.swift in Sources */,
