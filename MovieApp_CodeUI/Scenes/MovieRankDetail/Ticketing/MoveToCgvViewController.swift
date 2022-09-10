@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import SafariServices
 
 final class MoveToCgvViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        showCgv()
+    }
+    
+    func showCgv() {
+        if let url = URL(string: "https://m.cgv.co.kr/WebApp/Reservation/QuickResult.aspx?MovieIdx=") {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
     }
 }
